@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx
+    ports:
+      - 5500:80
+      - 22:22
+    volumes:
+      - .:/usr/share/nginx/html
+      
