@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .dis-none {display: none;}
+    </style>
+    <script src="index.js"></script>
 </head>
 <body>
-    <h1>어서오세요</h1>
-    <p>콜라, 사이다, 환타 중 하나를 주문하세요.</p>
-    <button>콜라</button>
-    <button>사이다</button>
-    <button>환타</button>
-    <p>콜라를 주문했습니다. 500원</p>
-    <p>사이다를 주문했습니다. 450원</p>
-    <p>환타를 주문했습니다. 300원</p>
-    <input type="number" />
-    <p>{음료} {수량}개 금액은 {총금액}입니다.</p>
-    <input type="number" />
-    <p>{지불금액}원을 받고 거스름돈 {거스름돈}원을 받으세요.</p>
+    <h1>음료 자판기 입니다.</h1>
+    <div id="step1">
+        <p>콜라, 사이다, 환타 중 하나를 주문하세요.</p>
+        <button onclick="btn1()">콜라</button>
+        <button onclick="btn2()">사이다</button>
+        <button onclick="btn3()">환타</button>
+        <p id="step1_txt" class="dis-none"></p>
+    </div>
+    <hr />
+    <div id="step2">
+        <input type="number" id="s" placeholder="음료 수량" /> <button onclick="ipt1()">입력</button>
+        <p id="step2_txt" class="dis-none">{음료} {수량}개 금액은 {총금액}원 입니다.</p>
+    </div>
+    <hr />
+    <div id="step3">
+         <input type="number" id="m" placeholder="지불 하실 금액"/> <button onclick="ipt2()">입력</button>
+         <p id="step3_txt" class="dis-none"></p>
+    </div>
 </body>
 </html>
